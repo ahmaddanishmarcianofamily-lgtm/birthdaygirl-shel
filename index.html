@@ -1257,4 +1257,1195 @@ button:active{
                 dan semoga tahun ini membawa banyak cerita
                 indah buat mu.
   </p>
+        </div>
+
+        <button
+            class="next-button"
+            onclick="showPage(3)">
+
+            🎮 Continue To The Games 🎀
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 3
+===================================================== -->
+
+<section id="page3" class="page">
+
+    <div class="card">
+
+        <h1>
+            Let's Play Some Games! 🎮💗
+        </h1>
+
+        <p>
+            Sebelum dapat surprise terakhir...
+            kamu kena lulus dua game dulu 😈🎀
+        </p>
+
+
+        <!-- ================= CATCH THE HEARTS ================= -->
+
+        <div class="game-card">
+
+            <h2>
+                💗 Catch The Hearts 💗
+            </h2>
+
+            <p>
+                Klik hati secepat mungkin sebelum dia menghilang! 😆🎀
+            </p>
+
+            <div class="catch-info">
+
+                Score:
+                <span id="heartScore">0</span>
+
+                &nbsp; | &nbsp;
+
+                Time:
+                <span id="heartTimer">15</span>s
+
+            </div>
+
+
+            <div
+                id="catchArea"
+                class="catch-area">
+            </div>
+
+
+            <button onclick="startHeartGame()">
+                💗 START GAME
+            </button>
+
+
+            <div id="heartResult"></div>
+
+        </div>
+
+
+        <!-- ================= GUESS THE GIFT ================= -->
+
+        <div class="game-card">
+
+            <h2>
+                🎁 Guess The Gift 🎁
+            </h2>
+
+            <p>
+                Salah satu hadiah ini punya surprise
+                spesial buat kamu. 👀💗
+            </p>
+
+            <p>
+                Tapiii... kamu kena cari dulu 😈🎀
+            </p>
+
+
+            <div class="gift-container">
+
+                <div
+                    id="giftBox1"
+                    class="gift-box"
+                    onclick="chooseGift(0)">
+
+                    🎁
+
+                </div>
+
+
+                <div
+                    id="giftBox2"
+                    class="gift-box"
+                    onclick="chooseGift(1)">
+
+                    🎁
+
+                </div>
+
+
+                <div
+                    id="giftBox3"
+                    class="gift-box locked"
+                    onclick="chooseGift(2)">
+
+                    🔒
+
+                </div>
+
+            </div>
+
+
+            <div id="giftResult"></div>
+
+
+            <div
+                id="specialGift"
+                class="special-gift">
+
+                <h2>
+                    🎉 YOU FOUND THE SPECIAL GIFT! 🎉
+                </h2>
+
+                <p>
+                    HAHAHA akhirnya ketemu juga 😭💗
+                </p>
+
+                <img
+                    src="danish-gift.jpg"
+                    alt="Special Gift">
+
+                <h3>
+                    Surprise! 🎀🤍
+                </h3>
+
+                <p>
+                    Ini hadiah spesial yang aku simpan
+                    buat kamu. 💗
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="next-button"
+            onclick="showPage(4)">
+
+            🔐 Open The Secret Message 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 4
+===================================================== -->
+
+<section id="page4" class="page">
+
+    <div class="card">
+
+        <div class="secret-card">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+
+            <h2>
+                Secret Message For Little Princess 💗
+            </h2>
+
+
+            <p class="secret-subtitle">
+                Ada sesuatu yang aku simpan khas
+                untuk kamu... 🎀
+            </p>
+
+
+            <div id="pinArea">
+
+                <div class="pin-boxes">
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,0)">
+
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,1)">
+
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,2)">
+
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,3)">
+
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,4)">
+
+
+                    <input
+                        type="tel"
+                        maxlength="1"
+                        class="pin-input"
+                        inputmode="numeric"
+                        oninput="movePin(this,5)">
+
+                </div>
+
+
+                <p class="pin-hint">
+
+                    💡 Hint:
+                    <b>Tarikh Lahir Little Princess 🎀</b>
+
+                </p>
+
+
+                <p id="pinError"></p>
+
+            </div>
+
+
+            <div
+                id="secretMessage"
+                class="secret-message">
+
+                <div class="unlock-heart">
+                    💗
+                </div>
+
+
+                <h2>
+                    Unlocked! 🎀
+                </h2>
+
+
+                <p>
+                    Aku mungkin cuma bisa memberikan hal kecil
+                    seperti ini, tapi aku benar-benar berharap
+                    hari ulang tahunmu menjadi hari yang indah
+                    dan berkesan.
+                </p>
+
+
+                <p>
+                    Terima kasih sudah menjadi seseorang
+                    yang berarti.
+                </p>
+
+
+                <p>
+                    Semoga senyum kamu selalu ada,
+                    semoga langkah kamu selalu dipermudahkan,
+                    dan semoga semua hal baik datang kepada
+                    kamu satu per satu. ✨
+                </p>
+
+
+                <h3>
+                    Happy Birthday, Shel. 🎂💗
+                </h3>
+
+
+                <p class="signature">
+                    — Baby/Danish 🤍
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+function showPage(pageNumber){
+
+    document.querySelectorAll(".page").forEach(page=>{
+        page.classList.remove("active");
+    });
+
+    const page=document.getElementById("page"+pageNumber);
+
+    if(page){
+        page.classList.add("active");
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+    }
+
+}
+
+
+/* =====================================================
+   OPEN GIFT
+===================================================== */
+
+function openGift(){
+
+    showPage(2);
+
+    createHearts();
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHearts(){
+
+    for(let i=0;i<14;i++){
+
+        setTimeout(()=>{
+
+            const heart=document.createElement("div");
+
+            heart.className="floating-heart";
+
+            heart.textContent=
+                ["💗","💕","💖","💓","🎀"][Math.floor(Math.random()*5)];
+
+            heart.style.left=
+                Math.random()*100+"vw";
+
+            heart.style.setProperty(
+                "--drift",
+                (Math.random()*160-80)+"px"
+            );
+
+            heart.style.animationDuration=
+                (4+Math.random()*3)+"s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(()=>{
+                heart.remove();
+            },7000);
+
+        },i*180);
+
+    }
+
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+function createSparkles(){
+
+    for(let i=0;i<10;i++){
+
+        setTimeout(()=>{
+
+            const sparkle=document.createElement("div");
+
+            sparkle.className="sparkle";
+
+            sparkle.textContent=
+                ["✨","💫","⭐","💗"][Math.floor(Math.random()*4)];
+
+            sparkle.style.left=
+                (20+Math.random()*60)+"vw";
+
+            sparkle.style.top=
+                (20+Math.random()*60)+"vh";
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(()=>{
+                sparkle.remove();
+            },800);
+
+        },i*60);
+
+    }
+
+}
+
+
+/* =====================================================
+   BIRTHDAY MUSIC
+===================================================== */
+
+let birthdayAudioContext;
+let birthdayMasterGain;
+let birthdayPlaying=false;
+let birthdayLoopTimer=null;
+
+
+const birthdayNotes=[
+
+    ["C5",0.00],
+    ["E5",0.50],
+    ["G5",1.00],
+    ["E5",1.50],
+
+    ["D5",2.00],
+    ["C5",2.50],
+    ["E5",3.00],
+    ["G5",3.50],
+
+    ["A5",4.00],
+    ["G5",4.50],
+    ["E5",5.00],
+    ["D5",5.50],
+
+    ["E5",6.00],
+    ["G5",6.50],
+    ["C6",7.00],
+    ["G5",7.50],
+
+    ["C5",8.00],
+    ["D5",8.50],
+    ["E5",9.00],
+    ["G5",9.50],
+
+    ["A5",10.00],
+    ["G5",10.50],
+    ["E5",11.00],
+    ["C5",11.50],
+
+    ["D5",12.00],
+    ["E5",12.50],
+    ["G5",13.00],
+    ["A5",13.50],
+
+    ["G5",14.00],
+    ["E5",14.50],
+    ["D5",15.00],
+    ["C5",15.50],
+
+    ["E5",16.00],
+    ["G5",16.50],
+    ["C6",17.00],
+    ["A5",17.50],
+
+    ["G5",18.00],
+    ["E5",18.50],
+    ["D5",19.00],
+    ["C5",19.50],
+
+    ["G5",20.00],
+    ["A5",20.50],
+    ["C6",21.00],
+    ["A5",21.50],
+
+    ["G5",22.00],
+    ["E5",22.50],
+    ["D5",23.00],
+    ["C5",23.50],
+
+    ["C5",24.00],
+    ["E5",24.50],
+    ["G5",25.00],
+    ["C6",25.50],
+
+    ["A5",26.00],
+    ["G5",26.50],
+    ["G5",27.00],
+    ["D5",27.50],
+
+    ["C5",28.00],
+    ["E5",28.50],
+    ["G5",29.00],
+    ["C6",29.50]
+
+];
+
+
+const noteFrequency={
+
+    "G4":392.00,
+    "C5":523.25,
+    "D5":587.33,
+    "E5":659.25,
+    "G5":783.99,
+    "A5":880.00,
+    "C6":1046.50
+
+};
+
+
+function playBirthdayNote(note,time){
+
+    if(
+        !birthdayAudioContext ||
+        !birthdayPlaying
+    ) return;
+
+
+    const osc=
+        birthdayAudioContext.createOscillator();
+
+    const gain=
+        birthdayAudioContext.createGain();
+
+
+    osc.type="sine";
+
+    osc.frequency.value=
+        noteFrequency[note];
+
+
+    gain.gain.setValueAtTime(
+        0,
+        time
+    );
+
+
+    gain.gain.linearRampToValueAtTime(
+        .12,
+        time+.03
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        .001,
+        time+.42
+    );
+
+
+    osc.connect(gain);
+
+    gain.connect(
+        birthdayMasterGain
+    );
+
+
+    osc.start(time);
+
+    osc.stop(time+.45);
+
+}
+
+
+function playBirthdayLoop(){
+
+    if(!birthdayPlaying) return;
+
+
+    const startTime=
+        birthdayAudioContext.currentTime+.05;
+
+
+    birthdayNotes.forEach(
+        ([note,offset])=>{
+
+            playBirthdayNote(
+                note,
+                startTime+offset
+            );
+
+        }
+    );
+
+
+    birthdayLoopTimer=
+        setTimeout(
+            playBirthdayLoop,
+            30000
+        );
+
+}
+
+
+function toggleMusic(){
+
+    const button=
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    if(!birthdayPlaying){
+
+        if(!birthdayAudioContext){
+
+            birthdayAudioContext=
+                new(
+                    window.AudioContext ||
+                    window.webkitAudioContext
+                )();
+
+
+            birthdayMasterGain=
+                birthdayAudioContext.createGain();
+
+
+            birthdayMasterGain.gain.value=.55;
+
+
+            birthdayMasterGain.connect(
+                birthdayAudioContext.destination
+            );
+
+        }
+
+
+        if(
+            birthdayAudioContext.state===
+            "suspended"
+        ){
+
+            birthdayAudioContext.resume();
+
+        }
+
+
+        birthdayPlaying=true;
+
+
+        button.innerHTML=
+            "⏸️ Pause Our Song";
+
+
+        playBirthdayLoop();
+
+
+    }else{
+
+        birthdayPlaying=false;
+
+
+        clearTimeout(
+            birthdayLoopTimer
+        );
+
+
+        birthdayLoopTimer=null;
+
+
+        if(birthdayAudioContext){
+
+            birthdayAudioContext.suspend();
+
+        }
+
+
+        button.innerHTML=
+            "🎵 Play Our Song";
+
+    }
+
+}
+
+
+/* =====================================================
+   CATCH THE HEARTS GAME
+===================================================== */
+
+let heartScore=0;
+let heartGameRunning=false;
+let currentHeart=null;
+
+let heartLifeTimer=null;
+let heartMoveTimer=null;
+let heartGameTimer=null;
+
+let heartTime=15;
+
+
+function startHeartGame(){
+
+    const area=
+        document.getElementById(
+            "catchArea"
+        );
+
+
+    clearTimeout(heartLifeTimer);
+    clearInterval(heartMoveTimer);
+    clearInterval(heartGameTimer);
+
+
+    area.innerHTML="";
+
+
+    heartScore=0;
+    heartTime=15;
+    heartGameRunning=true;
+
+
+    document.getElementById(
+        "heartScore"
+    ).textContent=heartScore;
+
+
+    document.getElementById(
+        "heartTimer"
+    ).textContent=heartTime;
+
+
+    document.getElementById(
+        "heartResult"
+    ).textContent=
+        "GO GO GO!! 💗";
+
+
+    spawnMovingHeart();
+
+
+    heartGameTimer=
+        setInterval(()=>{
+
+            heartTime--;
+
+
+            document.getElementById(
+                "heartTimer"
+            ).textContent=heartTime;
+
+
+            if(heartTime<=0){
+
+                endHeartGame();
+
+            }
+
+        },1000);
+
+}
+
+
+function spawnMovingHeart(){
+
+    if(!heartGameRunning) return;
+
+
+    const area=
+        document.getElementById(
+            "catchArea"
+        );
+
+
+    if(currentHeart){
+
+        currentHeart.remove();
+        currentHeart=null;
+
+    }
+
+
+    clearTimeout(heartLifeTimer);
+    clearInterval(heartMoveTimer);
+
+
+    const heart=
+        document.createElement("div");
+
+
+    heart.className="catch-heart";
+
+    heart.textContent="💗";
+
+    currentHeart=heart;
+
+
+    area.appendChild(heart);
+
+
+    moveHeartToRandomPosition(
+        heart
+    );
+
+
+    heartMoveTimer=
+        setInterval(()=>{
+
+            if(
+                heartGameRunning &&
+                heart===currentHeart &&
+                document.body.contains(heart)
+            ){
+
+                moveHeartToRandomPosition(
+                    heart
+                );
+
+            }
+
+        },250);
+
+
+    const disappearTime=
+        Math.max(
+            700,
+            1250-(heartScore*25)
+        );
+
+
+    heartLifeTimer=
+        setTimeout(()=>{
+
+            if(
+                heartGameRunning &&
+                heart===currentHeart
+            ){
+
+                heart.style.transform=
+                    "scale(0)";
+
+                heart.style.opacity="0";
+
+
+                setTimeout(()=>{
+
+                    if(
+                        heart===currentHeart
+                    ){
+
+                        heart.remove();
+
+                        currentHeart=null;
+
+                        clearInterval(
+                            heartMoveTimer
+                        );
+
+                        spawnMovingHeart();
+
+                    }
+
+                },150);
+
+            }
+
+        },disappearTime);
+
+
+    heart.addEventListener(
+        "click",
+        function(){
+
+            if(!heartGameRunning) return;
+
+            if(heart!==currentHeart) return;
+
+
+            heartScore++;
+
+
+            document.getElementById(
+                "heartScore"
+            ).textContent=heartScore;
+
+
+            clearTimeout(
+                heartLifeTimer
+            );
+
+            clearInterval(
+                heartMoveTimer
+            );
+
+
+            heart.style.transform=
+                "scale(1.5)";
+
+            heart.style.opacity="0";
+
+
+            createSparkles();
+
+
+            setTimeout(()=>{
+
+                if(
+                    heart===currentHeart
+                ){
+
+                    heart.remove();
+
+                    currentHeart=null;
+
+                    spawnMovingHeart();
+
+                }
+
+            },120);
+
+        }
+    );
+
+}
+
+
+function moveHeartToRandomPosition(heart){
+
+    const area=
+        document.getElementById(
+            "catchArea"
+        );
+
+
+    if(!area || !heart) return;
+
+
+    const padding=8;
+
+    const heartSize=82;
+
+
+    const maxX=
+        Math.max(
+            padding,
+            area.clientWidth-
+            heartSize-
+            padding
+        );
+
+
+    const maxY=
+        Math.max(
+            padding,
+            area.clientHeight-
+            heartSize-
+            padding
+        );
+
+
+    const randomX=
+        Math.floor(
+            Math.random()*
+            (maxX-padding+1)
+        )+padding;
+
+
+    const randomY=
+        Math.floor(
+            Math.random()*
+            (maxY-padding+1)
+        )+padding;
+
+
+    heart.style.left=
+        randomX+"px";
+
+    heart.style.top=
+        randomY+"px";
+
+}
+
+
+function endHeartGame(){
+
+    heartGameRunning=false;
+
+
+    clearTimeout(heartLifeTimer);
+    clearInterval(heartMoveTimer);
+    clearInterval(heartGameTimer);
+
+
+    heartLifeTimer=null;
+    heartMoveTimer=null;
+    heartGameTimer=null;
+
+
+    if(currentHeart){
+
+        currentHeart.remove();
+
+        currentHeart=null;
+
+    }
+
+
+    const result=
+        document.getElementById(
+            "heartResult"
+        );
+
+
+    if(heartScore>=15){
+
+        result.textContent=
+            "OMG!! Kamu cepat banget!! 😭💗🏆";
+
+    }else if(heartScore>=10){
+
+        result.textContent=
+            "Wihhh hebat!! 💗✨";
+
+    }else if(heartScore>=5){
+
+        result.textContent=
+            "Lumayan lahhh 😆💗";
+
+    }else{
+
+        result.textContent=
+            "HAHAHA heart-nya kabur semua 😭💗";
+
+    }
+
+}
+
+
+/* =====================================================
+   GUESS THE GIFT
+===================================================== */
+
+let giftStep=0;
+
+
+function chooseGift(index){
+
+    const box1=
+        document.getElementById(
+            "giftBox1"
+        );
+
+    const box2=
+        document.getElementById(
+            "giftBox2"
+        );
+
+    const box3=
+        document.getElementById(
+            "giftBox3"
+        );
+
+    const result=
+        document.getElementById(
+            "giftResult"
+        );
+
+
+    if(
+        index===0 &&
+        giftStep===0
+    ){
+
+        giftStep=1;
+
+
+        box1.classList.add(
+            "wrong"
+        );
+
+
+        box1.textContent="🌸";
+
+
+        result.textContent=
+            "HAHAHA bukan box ni 😭💗 Cuba cari lagi!";
+
+
+        createSparkles();
+
+        return;
+
+    }
+
+
+    if(
+        index===1 &&
+        giftStep===1
+    ){
+
+        giftStep=2;
+
+
+        box2.classList.add(
+            "wrong"
+        );
+
+
+        box2.textContent="🌸";
+
+
+        box3.classList.remove(
+            "locked"
+        );
+
+
+        box3.textContent="🎁";
+
+
+        result.textContent=
+            "Bukan sini juga 😭😂 Tinggal satu lagi... 👀💗";
+
+
+        createSparkles();
+
+        return;
+
+    }
+
+
+    if(
+        index===2 &&
+        giftStep===2
+    ){
+
+        giftStep=3;
+
+
+        box3.classList.add(
+            "correct"
+        );
+
+
+        box3.textContent="💝";
+
+
+        result.textContent=
+            "YAYYYYY!! AKHIRNYA KETEMU!! 😭💗🎉";
+
+
+        document
+            .getElementById(
+                "specialGift"
+            )
+            .classList.add("show");
+
+
+        createHearts();
+        createSparkles();
+
+        return;
+
+    }
+
+
+    if(
+        index===1 &&
+        giftStep===0
+    ){
+
+        result.textContent=
+            "
   
