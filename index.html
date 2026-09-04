@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Happy Birthday, Sayang 🎀</title>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    color:#71364f;
+    min-height:100vh;
+    overflow-x:hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,.75) 0 5%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(255,180,210,.55) 0 8%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 15% 85%,
+            rgba(255,150,195,.45) 0 8%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(255,220,235,.8) 0 7%,
+            transparent 24%
+        ),
+        linear-gradient(
+            135deg,
+            #ffc1da 0%,
+            #ffe1ed 25%,
+            #fff1f7 50%,
+            #ffd0e3 75%,
+            #ffb8d5 100%
+        );
+
+    background-attachment:fixed;
+}
+
+/* =====================================================
+   AESTHETIC BACKGROUND DECORATIONS
+===================================================== */
+
+body::before,
+body::after{
+    content:"";
+    position:fixed;
+    pointer-events:none;
+    z-index:-1;
+    border-radius:50%;
+    filter:blur(5px);
+}
+
+body::before{
+    width:330px;
+    height:330px;
+    top:-120px;
+    left:-100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.75),
+            rgba(255,150,195,.35),
+            transparent 70%
+        );
+
+    animation:
+        backgroundFloat1 8s ease-in-out infinite;
+}
+
+body::after{
+    width:380px;
+    height:380px;
+    right:-140px;
+    bottom:-100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8),
+            rgba(255,120,180,.3),
+            transparent 70%
+        );
+
+    animation:
+        backgroundFloat2 10s ease-in-out infinite;
+}
+
+@keyframes backgroundFloat1{
+
+    0%,100%{
+        transform:translate(0,0) scale(1);
+    }
+
+    50%{
+        transform:translate(35px,45px) scale(1.12);
+    }
+
+}
+
+@keyframes backgroundFloat2{
+
+    0%,100%{
+        transform:translate(0,0) scale(1);
+    }
+
+    50%{
+        transform:translate(-40px,-30px) scale(1.1);
+    }
+
+}
+
+/* soft decorative bubbles */
+
+.bg-bubble{
+    position:fixed;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:-1;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,.8),
+            rgba(255,255,255,.15) 45%,
+            rgba(255,130,180,.15)
+        );
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+        0 10px 30px rgba(255,100,160,.12),
+        inset 0 0 15px rgba(255,255,255,.4);
+
+    animation:
+        bubbleFloat 9s ease-in-out infinite;
+}
+
+.bg-bubble.b1{
+    width:90px;
+    height:90px;
+    left:5%;
+    top:25%;
+}
+
+.bg-bubble.b2{
+    width:55px;
+    height:55px;
+    right:8%;
+    top:40%;
+    animation-delay:2s;
+}
+
+.bg-bubble.b3{
+    width:120px;
+    height:120px;
+    left:12%;
+    bottom:5%;
+    animation-delay:4s;
+}
+
+.bg-bubble.b4{
+    width:70px;
+    height:70px;
+    right:20%;
+    bottom:20%;
+    animation-delay:1s;
+}
+
+@keyframes bubbleFloat{
+
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-25px) rotate(8deg);
+    }
+
+}
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page{
+    display:none;
+    min-height:100vh;
+
+    padding:
+        35px 18px;
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.page.active{
+    display:flex;
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+    width:100%;
+    max-width:700px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.88),
+            rgba(255,240,247,.78)
+        );
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:32px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border:
+        2px solid rgba(255,255,255,.85);
+
+    box-shadow:
+        0 25px 70px rgba(190,65,120,.18),
+        0 5px 20px rgba(255,100,160,.12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    top:-130px;
+    right:-100px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,160,200,.25),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    bottom:-110px;
+    left:-80px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,180,215,.25),
+            transparent 70%
+        );
+
+    pointer-events:none;
+}
+
+h1,
+h2,
+h3{
+    color:#d94d83;
+}
+
+p{
+    line-height:1.7;
+}
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+button{
+    border:none;
+
+    padding:
+        14px 24px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff82b0,
+            #e95891
+        );
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 9px 25px rgba(220,70,120,.25),
+        inset 0 1px 2px rgba(255,255,255,.35);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+button:hover{
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 13px 30px rgba(220,70,120,.3);
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+/* =====================================================
+   PAGE 1
+===================================================== */
+
+.open-title{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#b45a7a;
+}
+
+.big-heart{
+    font-size:75px;
+
+    filter:
+        drop-shadow(
+            0 10px 15px rgba(255,80,140,.25)
+        );
+
+    animation:
+        heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.13);
+    }
+
+}
+
+.open-card h1{
+    font-size:38px;
+    margin:10px 0;
+}
+
+.open-text{
+    color:#92536e;
+    margin-bottom:30px;
+}
+
+.creator{
+    margin-top:25px;
+    font-size:13px;
+    color:#a96882;
+}
+
+/* =====================================================
+   PAGE 2
+===================================================== */
+
+.photo{
+    width:100%;
+    max-width:420px;
+
+    border-radius:25px;
+
+    border:
+        6px solid white;
+
+    box-shadow:
+        0 15px 35px rgba(170,70,110,.2);
+
+    margin:20px auto;
+
+    display:block;
+
+    transition:
+        transform .3s ease;
+}
+
+.photo:hover{
+    transform:
+        scale(1.02)
+        rotate(-.5deg);
+}
+
+.message{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,247,251,.95),
+            rgba(255,224,237,.88)
+        );
+
+    padding:25px 20px;
+
+    border-radius:25px;
+
+    margin:25px 0;
+
+    border:
+        1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 10px 30px rgba(190,70,120,.1);
+}
+
+.message p{
+    margin:12px 0;
+}
+
+.music-button{
+    margin:
+        10px 0 25px;
+}
+
+.next-button{
+    margin-top:25px;
+}
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.floating-heart{
+    position:fixed;
+
+    bottom:-30px;
+
+    font-size:22px;
+
+    pointer-events:none;
+
+    animation:
+        floatHeart 5s linear forwards;
+
+    z-index:100;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        opacity:0;
+        transform:
+            translateY(0)
+            scale(.7)
+            rotate(0deg);
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translateY(-110vh)
+            translateX(var(--drift))
+            scale(1.2)
+            rotate(360deg);
+    }
+
+}
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle{
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:20px;
+
+    z-index:200;
+
+    animation:
+        sparkleOut .7s ease forwards;
+}
+
+@keyframes sparkleOut{
+
+    from{
+        opacity:1;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:0;
+        transform:
+            scale(1.8)
+            translateY(-30px);
+    }
+
+}
+
+/* =====================================================
+   GAME CARD
+===================================================== */
+
+.game-card{
+    margin:25px 0;
+
+    padding:25px 20px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,248,251,.92),
+            rgba(255,222,237,.88)
+        );
+
+    border:
+        2px solid rgba(255,120,170,.15);
+
+    box-shadow:
+        0 12px 35px rgba(190,70,120,.12);
+
+    position:relative;
+}
+
+/* =====================================================
+   CATCH GAME
+===================================================== */
+
+.catch-info{
+    font-weight:bold;
+    color:#c94f7d;
+    font-size:18px;
+    margin:15px 0;
+}
+
+#heartTimer{
+    color:#e94f88;
+}
+
+.catch-area{
+    position:relative;
+
+    width:100%;
+    height:340px;
+
+    margin:20px auto;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.95),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(255,180,210,.4),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffe0ed,
+            #fff3f8,
+            #ffd0e3
+        );
+
+    border:
+        3px solid rgba(255,105,160,.25);
+
+    box-shadow:
+        inset 0 0 30px rgba(255,100,160,.08),
+        0 10px 30px rgba(255,105,160,.15);
+}
+
+.catch-heart{
+    position:absolute;
+
+    width:82px;
+    height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:68px;
+
+    cursor:pointer;
+    user-select:none;
+
+    z-index:5;
+
+    filter:
+        drop-shadow(
+            0 6px 10px rgba(255,70,130,.3)
+        );
+
+    transition:
+        left .22s ease,
+        top .22s ease,
+        transform .18s ease,
+        opacity .15s ease;
+
+    animation:
+        heartBeat .5s infinite alternate;
+}
+
+.catch-heart:hover{
+    transform:scale(1.15);
+}
+
+@keyframes heartBeat{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.1);
+    }
+
+}
+
+#heartResult{
+    min-height:28px;
+    margin-top:12px;
+    font-weight:bold;
+    color:#c94f7d;
+}
+
+/* =====================================================
+   GIFT GAME
+===================================================== */
+
+.gift-container{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+}
+
+.gift-box{
+    width:145px;
+    height:145px;
+
+    font-size:64px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff9fc4,
+            #ff70a5
+        );
+
+    border:
+        4px solid white;
+
+    border-radius:24px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 9px 22px rgba(255,80,140,.25),
+        inset 0 2px 6px rgba(255,255,255,.35);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+}
+
+.gift-box:hover{
+    transform:
+        scale(1.08)
+        rotate(-2deg);
+
+    box-shadow:
+        0 13px 28px rgba(255,80,140,.35),
+        inset 0 2px 6px rgba(255,255,255,.45);
+}
+
+.gift-box:active{
+    transform:scale(.92);
+}
+
+.gift-box.wrong{
+    background:#ffd6e6;
+    cursor:default;
+    opacity:.7;
+}
+
+.gift-box.locked{
+    cursor:not-allowed;
+    opacity:.55;
+}
+
+.gift-box.correct{
+    background:#ff8fba;
+    cursor:default;
+}
+
+#giftResult{
+    min-height:30px;
+    font-weight:bold;
+    color:#c94f7d;
+}
+
+/* =====================================================
+   SPECIAL GIFT
+===================================================== */
+
+.special-gift{
+    display:none;
+
+    margin-top:25px;
+    padding:22px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #ffd8e8
+        );
+
+    animation:
+        giftAppear .7s ease;
+}
+
+.special-gift.show{
+    display:block;
+}
+
+.special-gift h2{
+    color:#d94d83;
+}
+
+.special-gift img{
+    width:100%;
+    max-width:350px;
+
+    border-radius:20px;
+
+    border:
+        5px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(180,70,110,.2);
+}
+
+@keyframes giftAppear{
+
+    from{
+        opacity:0;
+        transform:
+            scale(.7)
+            translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+
+}
+
+/* =====================================================
+   SECRET MESSAGE
+===================================================== */
+
+.secret-card{
+    margin-top:10px;
+
+    padding:30px 20px;
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,247,251,.95),
+            rgba(255,224,237,.9)
+        );
+
+    border:
+        2px solid rgba(255,105,160,.18);
+
+    box-shadow:
+        0 15px 35px rgba(200,70,120,.15);
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.lock-icon{
+    font-size:55px;
+    margin-bottom:8px;
+
+    animation:
+        lockFloat 2s ease-in-out infinite;
+}
+
+.secret-card h2{
+    color:#d94d83;
+    margin:8px 0;
+}
+
+.secret-subtitle{
+    color:#9c5874;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.pin-boxes{
+    display:flex;
+
+    justify-content:center;
+
+    gap:9px;
+
+    margin:20px 0;
+}
+
+.pin-input{
+    width:48px;
+    height:58px;
+
+    border:
+        2px solid #f3a1bf;
+
+    border-radius:14px;
+
+    background:white;
+
+    text-align:center;
+
+    font-size:25px;
+    font-weight:bold;
+
+    color:#d94d83;
+
+    outline:none;
+
+    box-shadow:
+        0 5px 15px rgba(255,100,150,.12);
+
+    transition:.2s;
+}
+
+.pin-input:focus{
+    border-color:#e95d91;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(255,100,150,.22);
+}
+
+.pin-hint{
+    font-size:13px;
+    color:#a55c78;
+    margin-top:15px;
+}
+
+.pin-hint b{
+    color:#d94d83;
+}
+
+#pinError{
+    min-height:22px;
+
+    margin-top:10px;
+
+    color:#d94d83;
+
+    font-size:14px;
+    font-weight:bold;
+}
+
+.secret-message{
+    display:none;
+
+    margin-top:25px;
+
+    padding:25px 20px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    border:
+        2px solid rgba(255,150,190,.25);
+
+    animation:
+        secretAppear .8s ease;
+}
+
+.secret-message.show{
+    display:block;
+}
+
+.unlock-heart{
+    font-size:48px;
+
+    animation:
+        heartPop .7s ease;
+}
+
+.secret-message h2{
+    color:#d94d83;
+}
+
+.secret-message p{
+    line-height:1.7;
+    color:#71364f;
+    margin:15px 0;
+}
+
+.secret-message h3{
+    color:#d94d83;
+    margin-top:22px;
+}
+
+.signature{
+    font-style:italic;
+    font-weight:bold;
+}
+
+@keyframes lockFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+
+@keyframes secretAppear{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+@keyframes heartPop{
+
+    0%{
+        transform:scale(0);
+    }
+
+    70%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+.pin-shake{
+    animation:
+        pinShake .4s ease;
+}
+
+@keyframes pinShake{
+
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-7px);
+    }
+
+    50%{
+        transform:translateX(7px);
+    }
+
+    75%{
+        transform:translateX(-5px);
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .card{
+        padding:28px 17px;
+    }
+
+    .open-card h1{
+        font-size:31px;
+    }
+
+    .gift-box{
+        width:110px;
+        height:110px;
+        font-size:50px;
+    }
+
+    .catch-area{
+        height:300px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .pin-boxes{
+        gap:6px;
+    }
+
+    .pin-input{
+        width:43px;
+        height:54px;
+        font-size:23px;
+    }
+
+}
+
+
+/* =====================================================
+   SCRIPT DECORATION ELEMENTS
+===================================================== */
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND BUBBLES -->
+
+<div class="bg-bubble b1"></div>
+<div class="bg-bubble b2"></div>
+<div class="bg-bubble b3"></div>
+<div class="bg-bubble b4"></div>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section id="page1" class="page active">
+
+    <div class="card open-card">
+
+        <div class="open-title">
+            ♡ A LITTLE SURPRISE FOR YOU ♡
+        </div>
+
+        <div class="big-heart">
+            💗
+        </div>
+
+        <h1>
+            Happy Birthday, Sayang 🎀
+        </h1>
+
+        <p class="open-text">
+            I made something small...
+            <br>
+            just for you. 🤍
+        </p>
+
+        <button onclick="openGift()">
+            OPEN YOUR GIFT 🎁
+        </button>
+
+        <div class="creator">
+            made with love by Baby 🤍
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section id="page2" class="page">
+
+    <div class="card">
+
+        <h1>
+            For You Shel 💗
+        </h1>
+
+        <button
+            id="musicButton"
+            class="music-button"
+            onclick="toggleMusic()">
+
+            🎵 Play Our Song
+
+        </button>
+
+
+        <img
+            src="photo1.jpg"
+            class="photo"
+            alt="Our memory">
+
+
+        <div class="message">
+
+            <p>
+                Hari ini adalah hari spesial buat seseorang
+                yang juga sangat spesial buat aku. 💗
+            </p>
+
+            <p>
+                Aku cuma mau bilang, terima kasih karena sudah
+                hadir dan menjadi bagian dari hari-hari aku.
+            </p>
+
+            <p>
+                Mungkin aku tidak selalu pandai menunjukkan
+                apa yang aku rasakan, tapi aku harap kau tahu
+                kalau kau adalah seseorang yang sangat berarti
+                buat aku. 🤍
+            </p>
+
+        </div>
+
+
+        <img
+            src="photo2.jpg"
+            class="photo"
+            alt="Another memory">
+
+
+        <div class="message">
+
+            <p>
+                Semoga di umur mu yang baru ini,
+                semua hal baik datang satu per satu. ✨
+            </p>
+
+            <p>
+                Semoga kau selalu bahagia, selalu dikelilingi
+                orang-orang yang sayang sama kau, dan semua
+                impian mu dapat tercapai.
+            </p>
+
+            <p>
+                Aku harap hari ulang tahun kali ini bisa menjadi
+                salah satu kenangan kecil yang membuat kamu
+                tersenyum. 🎀
+            </p>
+
+            <p>
+                Happy birthday, my little princess. 🎂💗
+            </p>
+
+            <p>
+                Semoga hari ini seindah senyum mu,
+                dan semoga tahun ini membawa banyak cerita
+                indah buat mu.
+  </p>
+  
